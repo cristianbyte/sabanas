@@ -1,4 +1,10 @@
 
+/*document.getElementById("image").style.backgroundImage = "url('"+ previewPic.src + "')";*/
+if(screen.width < 800){
+    document.getElementById("ul").style.visibility = "hidden";
+}
+
+
 function appear(){
     var menu = document.getElementById("nav");
     if (menu.classList.contains("active") ){
@@ -11,3 +17,4 @@ function appear(){
         document.getElementById("ul").style.visibility = "visible";
     }
 };
+
