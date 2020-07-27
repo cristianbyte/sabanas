@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
 :root{
   --background: #f4f6ff;
-  --color-font: #07031a;
+  --color-font: #26272b;
   --color-hover:#4f8a8b;
   --color-button: #fbd46d;
+  --random: #737373;
 }
 
 header{
@@ -19,15 +18,16 @@ header img{
 }
 
 
-section{
-  margin: 0 20%;
+.body-2{
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 body{
   background-color: var(--background);
 }
 
-p{
+.product p{
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -50,7 +50,7 @@ p{
 .active{
   height: auto;
 }
-ul{
+nav ul{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -60,18 +60,15 @@ ul{
   margin-right: 30px;
 }
 
-p{
+section p{
   text-align: justify;
-}
-
-.down{
-  margin-top: 80px;
-  max-width: 700px;
-  padding: 20px;
+  font-size: 1.4em;
+  color: var(--color-font);
 }
 
 nav{
   width: 100%;
+  max-width: 1920px;
   background-color: var(--background);
   padding: 10px;
   position: fixed;
@@ -86,6 +83,11 @@ nav{
   display: flex;
   flex-direction: column;
 }
+.product p{
+  margin: 10px 0px;
+  font-size: 1em;
+}
+
 .top img{
   width: 150px;
   float: left;
@@ -96,9 +98,10 @@ h1{
 
 h2{
   margin: 30px 0px 20px;
+  
 }
 .space{
-  margin:10px;
+  padding:10px;
 }
 
 .product button{
@@ -108,33 +111,91 @@ h2{
   border-radius: 10px;
   cursor: pointer;
   background-color: var(--color-button);
-  font-family: "Poppins", sans-serif;
 }
-ul li{
-  list-style: none;
+nav ul li{
   align-self: center;
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
-ul li a{
+nav ul li a{
   color: var(--color-font);
   text-align: center;
   padding: 20px 10px;
-  font-size: 20px;
-  text-decoration: none;
-  font-family: "Poppins",sans-serif ;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
-li a:hover{
+nav li a:hover{
   border-bottom: 6px solid var(--color-hover);
   transition: all .1s ease-in-out;
+}
+
+
+/*##########################################*/
+footer{
+  background-color: var(--color-font);
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+  color: var(--random);
+}
+footer a{
+  color: var(--random);
+}
+footer a:hover{
+  color: var(--background);
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+h4{
+  color: var(--background);
+  margin: 10px 0;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.footer-grid{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4,1fr);
+  padding: 20px 0;
+}
+.box1{
+  grid-column: span 2;
+}
+
+.border-top{
+  padding: 10px 0;
+  border-top: 1px solid var(--background);
+}
+
+.flex-row ul{
+  width: 50%;
+  justify-content: flex-end;
+}
+svg{
+  width: 32px;
+  padding: 5px;
+  margin-left:2px;
+  border-radius: 16px;
+}
+svg:hover{
+  background-color: var(--background);
 }
 
 @media(max-width:800px){
   nav ul{
     margin-top:60px;
+    display: flex;
     flex-direction: column;
   }
   nav ul li{
-    margin: 20px 0;
+    align-content: center;
+    display: inline;
+    margin: 20px 0px;
   }
 
   header{
@@ -144,15 +205,17 @@ li a:hover{
     width: 100%;
   }
   nav ul li a{
-    width: 100%;
+    padding: 20px 20px;
     justify-content: center;
-    padding: 20px 50px;
-    overflow: scroll;
   }
   .tag img{
     display: block;
   }
-  section{
+  .body-2{
     margin: 0px 5%;
+  }
+  .footer-grid{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2,1fr);
   }
 }

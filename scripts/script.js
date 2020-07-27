@@ -4,7 +4,6 @@ if(screen.width < 800){
     document.getElementById("ul").style.visibility = "hidden";
 }
 
-
 function appear(){
     var menu = document.getElementById("nav");
     if (menu.classList.contains("active") ){
